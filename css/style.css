@@ -143,7 +143,7 @@ p{
 .flex{
     display: flex;
     min-height: 100px;
-    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 
@@ -158,14 +158,6 @@ p{
     grid-gap: 6%;
 }
 
-.grid3x3{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr) auto;
-    grid-row-gap: 1px;
-    grid-column-gap: 3%;
-    margin: 0 auto;
-}
 /* end grid  */
 
 /* start icons */
@@ -321,8 +313,8 @@ nav li,
     border: 1px solid var(--color-orange);
     display: inline-block;
     line-height: 160%;
-    width:54px;
-    height: 54px;  
+    width:2.5rem;
+    height: 2.5rem;  
     text-align: center;
     border-radius: 50%;
     font-size: 1.5rem;  
@@ -334,9 +326,9 @@ nav li,
     display: inline-block;
     width: 65%;
 }
-.flex a img {height: 50px;}
-.download__img{margin-top: 50px;}
-.download__img a:first-child{margin-right: 50px;}
+.flex a img {height: 2.5rem;}
+.download__img{margin-top: 2.5rem;}
+.download__img a:first-child{margin:0 2.5rem ;}
 
 /*------------------------------ */ 
 /* cities */
@@ -403,7 +395,10 @@ blockquote:before {
 /*------------------------------ */ 
 /* Sign__up__and__pricing__plans */
 /*------------------------------ */
-
+.flex .compenant{
+    flex: 1;
+    margin: 3%;
+}
 #Sign__up__and__pricing__plans{
     background-color: var(--color-gray);
 }
@@ -437,56 +432,68 @@ blockquote:before {
 /*Contact__form */
 /*------------------------------ */
 
-form{
-    display: grid;
-    grid-template-areas: "space name     inputname     space1"
-                         "space email    inputemail    space1"
-                         "space question droplist      space1"
-                         "space new      checkbox      space1"
-                         "space feedback textbox       space1"
-                         "space space2   button        space1";
-    grid-template-columns:1fr 1fr 2fr 1fr;
-    grid-template-rows: repeat(4,1fr) 2fr 1fr;
-    align-content: space-around;
-    grid-row-gap: 5px;
-    vertical-align: middle;
-}
-#name{ grid-area: name;}
-#input__name{ grid-area: inputname;}
-#email{ grid-area: email;}
-#input__email{ grid-area: inputemail;}
-#question{ grid-area: question;}
-#input__question{ grid-area: droplist;}
-#new{ grid-area: new;}
-#checkbox{ grid-area: checkbox;}
-#feedback{ grid-area: feedback;}
-#textbox{ grid-area: textbox;}
-#button{grid-area: button;}
-#space{ grid-area: space;}
-#space1{ grid-area: space1;}
-#space2{ grid-area: space2;}
-label{
-    vertical-align: middle;
-}
-input,
-select{
-    vertical-align: middle;
-    border: 1px solid var(--color-gray);
-    border-radius: 3px;
-    height: 70%;
-}
-select{
-    background: var(--color-gray);
-}
-input[type=submit]{
-    width: 30%;
-
-}
-input[type=checkbox]{
-    margin-right: 10px; 
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
 }
 
+.flex-outer {
+  max-width: 650px;
+  margin: 0 auto;
+}
 
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 220px;
+  max-width: 240px;
+}
+
+.flex-outer > li > label + * {
+  flex: 1 0 350px; 
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea,
+.flex-outer li select {
+  padding: .5rem;
+  border: none;
+  border: 2px solid var(--color-gray);
+  border-radius: 10px; 
+}
+
+.flex-outer li button {
+  margin:0 auto;
+  padding: 8px 16px;
+  border: none;
+  background: var(--color-orange);
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 30px;
+}
 /*------------------------------ */ 
 /*Footer */
 /*------------------------------ */
@@ -516,7 +523,6 @@ footer{
     margin-top:0; 
 }
 .icon__fix{
-    /* float: left; */
     margin-right: 50%;
     font-size: 1.5rem;  
     transform: translateX(50%);

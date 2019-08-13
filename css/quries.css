@@ -26,19 +26,19 @@
 }
 
 @media only screen and (max-width:767px){
-    html,
-    body{    
-        font-size: 14px;
-    }
-    .section{
-        padding: 25px 0;
-    }
-    .super__header{
-        padding: 0 4%;
-    }
-    .compenant{
+    html,body{font-size: 14px;}
+    .section{padding: 25px 0;}
+    .super__header{padding: 0 4%;}
+    .flex .compenant{
         width: 100%;
+        flex: auto;
     }
+    .app__photo{text-align: center;}
+    #Customer__testimonials blockquote{margin-bottom: 3rem;}
+    .flex-outer > li > label,.flex-outer li p {flex: 1 0 200px;}
+    nav ul {display: none;}
+    h1{font-size: 1.8rem;}
+    h2{font-size: 1.45rem;}
 }
 
 @media only screen and (max-width:480px){
