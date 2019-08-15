@@ -36,9 +36,24 @@
     .app__photo{text-align: center;}
     #Customer__testimonials blockquote{margin-bottom: 3rem;}
     .flex-outer > li > label,.flex-outer li p {flex: 1 0 200px;}
-    nav ul {display: none;}
+    
     h1{font-size: 1.8rem;}
     h2{font-size: 1.45rem;}
+
+    nav ul {display: none;}
+    nav ul {
+        float: left;
+        margin: 0 25px;
+        padding: 0 5px ; 
+        font-size: 1rem; 
+    }
+    nav li {display: block;}
+    .mobile__nav{
+        display: inline-block;
+        font-size: 2rem;
+        margin: 15px;
+    }
+    .fixed__navbar {height: auto;}
 }
 
 @media only screen and (max-width:480px){

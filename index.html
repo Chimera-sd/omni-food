@@ -5,39 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- logo icon -->
-    <link rel="shortcut icon" href="./img/logo.png">
+
+    <link rel="stylesheet" href="./css/animate.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+    <link href="./css/font.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/quries.css">
     <title>Omni Food</title>
+
+
+    <!-- logo icon -->
+    <!-- <link rel="shortcut icon" href="./img/logo.png"> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
     <header class="back__ground" id="main__header">
 
         <nav>
-            <div class="container">
-                <div class="logo">
-                    <img src="./img/logo-white.png" alt="logo" class="logo__img">
-                    <img src="./img/logo.png" alt="black__logo" class="black__logo">
-                </div>
+            <div class="container row">
 
-                <ul>
+                <img src="./img/logo-white.png" alt="logo" class="logo__img">
+                
+                <img src="./img/logo.png" alt="black__logo" class="black__logo">
+                
+                <ul class="main__nav">
                     <li><a href="#Contact__form" class="linked__list">Food delivery</a></li>
                     <li><a href="#how__it__work" class="linked__list">How it works</a></li>
                     <li><a href="#cities" class="linked__list">Our cities </a></li>
                     <li><a href="#signup" class="linked__list">Sign up</a></li>
                 </ul>
+
+                <a class="mobile__nav"><i class="icon ion-md-reorder"></i></a>
             </div>
             
         </nav>
 
         <div class=" container super__header">
             <h1>GOODBYE JUNK FOOD<br>HELLO SUPER HEALTHY MEALS.</h1>
-            <a href="#Sign__up__and__pricing__plans" class="btn full">I’m hungry</a>
+            <a href="#signup" class="btn full">I’m hungry</a>
             <a href="#feautres" class="btn empty">Show me more</a>
         </div>
 
@@ -230,7 +253,7 @@
         
         <section class="flex container">
             
-            <blockquote class="compenant">
+            <blockquote class="compenant" >
                 Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
                 <cite>
                     <img src="./img/customer-1.jpg" alt="Alberto Duncan">
@@ -269,7 +292,7 @@
                 
                 <!-- 1st coulmn -->
                 
-                <div class="compenant">
+                <div class="compenant" id="item__bigger">
                     
                     <div class="price">
                         <h3>Premium</h3>
@@ -393,7 +416,7 @@
         </form>
     </section>
 
-    <footer class="section footer">
+    <footer class=" footer">
         
         <section class="grid2">
             <div>
@@ -433,7 +456,6 @@
         </section>
     
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.js"></script>
